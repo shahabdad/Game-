@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Box = ({value,onClick,winner}) => {
   return (
     <button
@@ -11,5 +10,4 @@ const Box = ({value,onClick,winner}) => {
 </button>
   );
 }
-
 export default Box;

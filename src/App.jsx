@@ -1,38 +1,21 @@
 import React, { useState } from "react";
-import GameBoard from "./Component/GameBoard"; // Ensure the path is correct
-import Message from "./Component/Message"; // Ensure the path is correct
-import "./Component/App.css"; // Ensure the path is correct
+import GameBoard from "./Component/GameBoard"; 
+import Message from "./Component/Message"; 
+import "./Component/App.css"; 
 
 function App() {
-  const [turn0, setTurn0] = useState(true); // True for Player X's turn, false for Player O
-  const [boxes, setBoxes] = useState(Array(9).fill("")); // Store the state of each box in the grid
-  const [winner, setWinner] = useState(null); // Track the winner
-  const [isDarkMode, setIsDarkMode] = useState(false); // State for dark mode
-
-  // Function to reset the game
+  const [turn0, setTurn0] = useState(true);
+  const [boxes, setBoxes] = useState(Array(9).fill("")); 
+  const [winner, setWinner] = useState(null); 
+  const [isDarkMode, setIsDarkMode] = useState(false); 
   const resetGame = () => {
-    setBoxes(Array(9).fill("")); // Reset boxes
-    setTurn0(true); // Set turn to Player X
+    setBoxes(Array(9).fill("")); 
+    setTurn0(true); 
     setWinner(null); 
   };
-
-  // Function to toggle dark mode
-  // const toggleDarkMode = () => {
-  //   setIsDarkMode(!isDarkMode);
-  //   document.body.classList.toggle("dark-mode"); // Toggle the dark-mode class on the body
-  //   if (isDarkMode) {
-  //     document.body.classList.add("dark-mode");
-  //   } else {
-  //     document.body.classList.remove("dark-mode");
-  //   }
-    
-  //   console.log("Dark Mode Active:", document.body.classList.contains("dark-mode"));
-
-    
-  // };
-const toggleDarkMode =()=>
+  const toggleDarkMode =()=>
 {
-  setIsDarkMode((prevMode)=>{
+   setIsDarkMode((prevMode)=>{
 const newMode = !prevMode;
 if (newMode){
   document.body.classList.add("dark-mode");
@@ -62,11 +45,10 @@ return newMode;
         winner={winner}
         setWinner={setWinner}
       />
-      
-      {/* Display winner message if there is a winner */}
+     
       {winner && <Message winner={winner} resetGame={resetGame} />}
       
-      {/* Reset Button */}
+
       <button onClick={resetGame} className="control-btn">
         Reset Game
       </button>

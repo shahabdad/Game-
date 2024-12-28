@@ -1,0 +1,41 @@
+.msg-container {
+    text-align: center;
+    background-color: rgba(0, 255, 195, 0.1); /* Light green overlay */
+    border: 2px solid #00ffc3; /* Green border */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.5), 0 0 20px rgba(0, 255, 195, 0.3);
+  }
+  #msg {
+    font-size: 1.5rem;
+    color: #00ffc3; /* Green text */
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #00ffc3, 0 0 10px rgba(0, 255, 195, 0.5);
+  }
+  
+  #new-btn {
+    background-color: #00ffc3; /* Green background */
+    color: #121212; /* Dark text */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.5), 0 0 20px rgba(0, 255, 195, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #new-btn:hover {
+    background-color: #121212; /* Dark background */
+    color: #00ffc3; /* Green text */
+    transform: scale(1.1);
+  }
+  
+  #new-btn:active {
+    transform: scale(0.95);
+  }
+  
